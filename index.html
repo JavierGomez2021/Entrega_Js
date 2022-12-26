@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Simulador de Cuotas</title>
+    </head>
+    <body>
+        <div>
+            <h1>Pago con Tarjeta de Credito</h1>
+
+            <label>Ingrese el monto de su compra</label><br><br>
+            <input type="text" id="montoCompra"><br><br>
+
+            <label for="">Seleccione su tarjeta de credito</label>
+            <br>
+            <br>
+            <select name="selectTarjeta" id="tarjeta" onchange="verCompania()">
+                <option value="default"  id="selDefautl" selected>Seleccione su tarjeta</option>
+                <option value="visa"     id="selVisa"1>Visa</option>
+                <option value="master"   id="selMaster">MasterCard</option>
+                <option value="american" id="selAmerican">American Express</option>
+            </select>
+            <br>
+            <br>
+            <label for="">Selecione la cantidad de cuotas</label>
+            <br>
+            
+            <ul>
+                <li>
+                    <input type="checkbox" id="cuotas1" value="1" onclick="calcularPrecio(1)">
+                    <label id="lblCuota1"></label>
+                </li>
+                <li>
+                    <input type="checkbox" id="cuotas2" value="2" onclick="calcularPrecio(2)">
+                    <label id="lblCuota2"></label>
+                </li>
+                <li>
+                    <input type="checkbox" id="cuotas3" value="3" onclick="calcularPrecio(3)">
+                    <label id="lblCuota3"></label>
+                </li>
+
+            </ul> 
+                <label>Total</label><br><br>
+                <label>$</label>
+                <input type="text" id="precioFinal">
+                <br>
+                <br>
+            </div>      
+
+    <script src="app.js"></script>        
+    </body>
+</html>
